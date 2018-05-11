@@ -39,7 +39,7 @@ This system makes use of a pre-trained [Word2Vec](https://code.google.com/archiv
 $ ./getW2V.sh
 ```
 
-##Build and Run
+## Build and Run
 The system is built with Maven. Hence, you only have to run the following commands:
 
 ```bash
