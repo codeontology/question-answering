@@ -3,6 +3,7 @@ package org.codeontology.interpreter;
 import org.codeontology.Settings;
 import org.codeontology.Utils;
 import org.codeontology.wordvectors.WordVectorsManager;
+import org.codeontology.interpreter.ranking.RankingUnderThresholdException;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -22,12 +23,22 @@ public class Main {
         Scanner s = new Scanner(System.in);
 
         while (true) {
-            System.out.print("> ");
-            String command = s.nextLine();
-            Object result = interpreter.exec(command);
-            System.out.println();
-            System.out.println("Answer: " + result);
-            System.out.println();
+            try {
+                System.out.print("> ");
+                String command = s.nextLine();
+                Object result = interpreter.exec(command);
+                System.out.println();
+                System.out.println("Answer: " + result);
+                System.out.println();
+            } catch (RankingUnderThresholdException e) {
+                System.out.println("Could not process the input question.");
+                System.out.println("Try using a different threshold.");
+                System.out.println();
+            } catch (Exception e) {
+                System.out.println("Unexpected error.");
+                e.printStackTrace();
+                System.out.println();
+            }
         }
     }
 

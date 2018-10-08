@@ -23,5 +23,5 @@ public class Settings {
     public static final String QUESTION_ANSWERING_BENCHMARK = "../QuestionAnsweringBenchmark.tsv";
 
     public static final int RANKING_SIZE = 15;
-    public static final double THRESHOLD = 0.15;
+    public static final double THRESHOLD = 0.015;
 }
