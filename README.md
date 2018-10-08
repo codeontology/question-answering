@@ -40,16 +40,15 @@ $ ./getW2V.sh
 ```
 
 ## Build and Run
-The system is built with Maven. Hence, you only have to run the following commands:
+The system is built with Maven. Be sure to use OpenJDK 8 (incompatibility with JDK 10 is known). Hence, you only have to run the following commands:
 
 ```bash
 $ cd QuestionAnswering
 $ mvn package
-$ cd ..
 ```
 
 Now, you are ready to run the tool:
 
 ```bash
-$ ./askCO
+$ ../askCO
 ```
