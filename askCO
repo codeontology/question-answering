@@ -1,2 +1,2 @@
 #!/bin/bash
-java -Xmx12G -cp target/SemanticInterpreter-1.0-SNAPSHOT-jar-with-dependencies.jar org.codeontology.interpreter.Main
+java -Xmx12G -cp target/SemanticInterpreter-1.0-SNAPSHOT.jar org.codeontology.interpreter.Main
