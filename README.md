@@ -18,11 +18,15 @@ First, be sure that [Fuseki](https://jena.apache.org/documentation/fuseki2/) is 
 
 Next, you should download the dataset extracted by applying CodeOntology to the OpenJDK 8 project. It is available on [Zenodo](https://doi.org/10.5281/zenodo.785550) under CC BY 4.0 license.
 
-Create a new dataset named OpenJDK on Fuseki and load all the files you have downloaded from Zenodo to the newly created dataset.
+Create a new dataset named `OpenJDK` on Fuseki and load all the files you have downloaded from Zenodo to the newly created dataset.
 
 Now, you should be able to use Fuseki to run simple queries on CodeOntology. For instance, you can select all methods from OpenJDK computing the cube root of a real value by running the following SPARQL query:
 
 ```SPARQL
+PREFIX woc: <http://rdf.webofcode.org/woc/>
+PREFIX dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+PREFIX dbr: <http://dbpedia.org/resource/>
+
 SELECT ?method
 WHERE {
   ?method a woc:Method ;
